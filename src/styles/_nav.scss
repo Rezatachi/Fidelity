@@ -1,0 +1,22 @@
+nav{
+   min-height: 12vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 5rem;
+   }
+      h1{
+         font-family: 'Montserrat', sans-serif; 
+         }
+      svg {
+      cursor: pointer;
+    }
+
+   @media screen and (max-width: 768px){
+      nav{
+         .lib-btn{
+           z-index: 10;
+            }
+               }
+                  }

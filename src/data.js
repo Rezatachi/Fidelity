@@ -71,6 +71,24 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
+    {
+      name: "Beyond Clouds",
+      cover: "https://i.scdn.co/image/ab67616d0000b273ad6728c62a2f771a0c5af67d",
+      artist: "Saib",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9297",
+      color: ["#EEC9D1", "#708AA7"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Who Knows",
+      cover: "https://i.scdn.co/image/ab67616d0000b27380873d54dde9a81963be71b2",
+      artist: "Psalm Trees, Guillaume Muschalle",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10553",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
   ];
 }
 
