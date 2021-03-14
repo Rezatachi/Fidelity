@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7fe4ffb5-38ff-4134-974f-6a406d282e53/deploy-status)](https://app.netlify.com/sites/fidelity-vibrance/deploys)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
