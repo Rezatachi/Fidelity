@@ -1,6 +1,5 @@
 import React from "react";
 import { CleanButton } from "react-sensei";
-import styled from "styled-components";
 
 const Nav = ({ libraryStatus, setlibraryStatus }) => {
   return (
