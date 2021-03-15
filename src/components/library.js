@@ -1,6 +1,7 @@
 import React from "react";
-import { Card } from "react-sensei";
+import { Card, StatIconCard } from "react-sensei";
 import Libsong from "./librarysong";
+import styled from "styled-components";
 
 const library = ({
   songs,
@@ -10,9 +11,15 @@ const library = ({
   setsongs,
   libraryStatus,
 }) => {
+  const StyledButtonWrapper2 = styled.div`
+    width: 20rem;
+  `;
   return (
     <Card className={`library ${libraryStatus ? "active-lib" : " "}`}>
       <h2>Library</h2>
+      <StyledButtonWrapper2>
+        <StatIconCard label="Total Lo-Fi Songs" value="16" icon="volume-up" />
+      </StyledButtonWrapper2>
       <div className="library-songs">
         {songs.map((song) => (
           <Libsong

@@ -4,9 +4,10 @@ import Song from "./components/song";
 import chillhop from "./data";
 import Nav from "./components/nav";
 import Library from "./components/library";
+import BaseSec from "./components/footer";
 import "./styles/app.scss";
 //imported libraries
-import { SenseiProvider, themeDark as theme } from "react-sensei";
+import { SenseiProvider, themeDarkRed as theme } from "react-sensei";
 
 function App() {
   const audioRef = useRef(0);
@@ -28,6 +29,8 @@ function App() {
   const songEndHandler = async () => {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
     await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+    if (isPlaying) audioRef.current.play();
+    return;
   };
   return (
     <SenseiProvider theme={theme}>
@@ -50,6 +53,7 @@ function App() {
             setCurrentSong={setCurrentSong}
             isPlaying={isPlaying}
           />
+          <BaseSec />
           <Library
             libraryStatus={libraryStatus}
             setsongs={setsongs}

@@ -89,6 +89,76 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
+    {
+      name: "Flashback",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
+      artist: "Blue Wednesday, Shopan",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=11225",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Toofpick",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
+      artist: "Blue Wednesday, Shopan",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=11227",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Déjà vu",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
+      artist: "Blue Wednesday, Shopan",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=11229",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Day One",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
+      artist: "Blue Wednesday, Shopan",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=11231",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Murmuration",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
+      artist: "Blue Wednesday, Shopan",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=7814",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Dancing Droplets",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/09/88e7eb711f8c71d87fc102e97cf91e36f692348d-1024x1024.jpg",
+      artist: "Blue Wednesday, Shopan",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9915",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Zenith",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/09/88e7eb711f8c71d87fc102e97cf91e36f692348d-1024x1024.jpg",
+      artist: "Blue Wednesday, Shopan",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9927",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
   ];
 }
 

@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 //Imported functions
-
+import { playAudio } from "../util";
 const Player = ({
   currentSong,
   isPlaying,
@@ -22,7 +22,7 @@ const Player = ({
 }) => {
   // The dangers of use effect^:: The UseEffect will still run, causing unneccsary actions. In this case, the player.js and the libsong js use the same code causing useEffect to update twice.
 
-  const activeLibraryHander = (nextPrev) => {
+  const activeLibraryHandler = (nextPrev) => {
     const newSongs = songs.map((song) => {
       if (song.id === nextPrev.id) {
         // Check the NEXT one and set it the ACTIVE
@@ -65,23 +65,20 @@ const Player = ({
     // First we need to get an index, 1-7 in the array
     //If the current songid = the song id, that is our current Index
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+    //Forward BAck
     if (direction === "skip-forward") {
       await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-      activeLibraryHander(songs[(currentIndex + 1) % songs.length]);
-      // Creates a promise and waits.
-      // Grab the curerent index, and add it to move to the next song's array
+      activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
     }
     if (direction === "skip-back") {
       if ((currentIndex - 1) % songs.length === -1) {
         await setCurrentSong(songs[songs.length - 1]);
-        activeLibraryHander(songs[songs.length - 1]);
+        activeLibraryHandler(songs[songs.length - 1]);
         if (isPlaying) audioRef.current.play();
         return;
-        // If the index is -1 a.k.a the song number is lower than -1, go back to the end;
       }
       await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
-      activeLibraryHander(songs[(currentIndex - 1) % songs.length]);
-      // Grab the curerent index, and add it to move to the next song's array
+      activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
     }
     if (isPlaying) audioRef.current.play();
   };
