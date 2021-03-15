@@ -12,7 +12,14 @@ nav{
       svg {
       cursor: pointer;
     }
-
+ .btn{
+         margin-right: 4rem;
+         border-radius: 25%;
+         font-family: "Montserrat", sans-serif;
+         z-index: 10;
+         outline: none;
+         border: none;
+         }
    @media screen and (max-width: 768px){
       nav{
          .lib-btn{

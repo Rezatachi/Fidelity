@@ -159,6 +159,26 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
+    {
+      name: "Life Is a Dream",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/06/faa452681fe33146c42a1b422fdf7cd7fd082637-1024x1024.jpg",
+      artist: "xander.",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9392",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Times Ahead",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/06/faa452681fe33146c42a1b422fdf7cd7fd082637-1024x1024.jpg",
+      artist: "xander.",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9027",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
   ];
 }
 

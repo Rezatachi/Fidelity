@@ -18,7 +18,11 @@ const library = ({
     <Card className={`library ${libraryStatus ? "active-lib" : " "}`}>
       <h2>Library</h2>
       <StyledButtonWrapper2>
-        <StatIconCard label="Total Lo-Fi Songs" value="16" icon="volume-up" />
+        <StatIconCard
+          label="Total Lo-Fi Songs"
+          value={songs.length}
+          icon="volume-up"
+        />
       </StyledButtonWrapper2>
       <div className="library-songs">
         {songs.map((song) => (

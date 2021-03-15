@@ -2,26 +2,19 @@ import React from "react";
 import { CleanButton } from "react-sensei";
 import styled from "styled-components";
 
-const Nav = ({ libraryStatus, setlibraryStatus, theme }) => {
-  const StyledButtonWrapper = styled.div`
-    margin-right: 4rem;
-    border-radius: 25%;
-    font-family: "Montserrat", sans-serif;
-    z-index: 10;
-  `;
+const Nav = ({ libraryStatus, setlibraryStatus }) => {
   return (
     <nav>
       <h1>Fidelity</h1>
-      <StyledButtonWrapper>
+      <div className="btn">
         <CleanButton
-          style={{ outline: "none", border: "none", cursor: "pointer" }}
+          style={{ outline: "none", border: "none" }}
           isPrimary
-          classname="lib-btn"
           onClick={() => setlibraryStatus(!libraryStatus)}
         >
           <h1>Library</h1>
         </CleanButton>
-      </StyledButtonWrapper>
+      </div>
     </nav>
   );
 };
