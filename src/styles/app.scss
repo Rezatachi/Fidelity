@@ -10,10 +10,32 @@
   }
   
 .App{
-  transition: all 0.5s ease}
-
+  transition: all 0.5s ease;
+  animation: opacity 1s ease-out;
+}
+@keyframes opacity{
+    0%{opacity: 0;
+    }
+      
+    100%
+      {opacity: 1;
+      }
+}      
 .library-active{
   margin-left: 30%
+  }
+.loader{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: #2e2828;
+  width: 100%;
+  height: 100%;
+  
   }
 @import "./song";
 @import "./player";
