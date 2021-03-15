@@ -1,6 +1,6 @@
 import React from "react";
 //Imported functions
-
+import { playAudio } from "../util";
 const Libsong = ({
   song,
   setCurrentSong,
@@ -15,7 +15,7 @@ const Libsong = ({
   const songSelectHandler = () => {
     const selectedSong = songs.filter((state) => state.id === id);
     setCurrentSong({ ...selectedSong[0] });
-    //Add active state
+    //Set Active in library
     const newSongs = songs.map((song) => {
       if (song.id === id) {
         return {
@@ -32,7 +32,7 @@ const Libsong = ({
     setsongs(newSongs);
 
     //Play audio
-    if (isPlaying) audioRef.current.play();
+    playAudio(isPlaying, audioRef);
   };
   return (
     <div
