@@ -8,7 +8,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 //Imported functions
-import { playAudio } from "../util";
 const Player = ({
   currentSong,
   isPlaying,
