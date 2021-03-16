@@ -5,6 +5,8 @@ import {
   faAngleLeft,
   faAngleRight,
   faPause,
+  faRandom,
+  faRedo,
 } from "@fortawesome/free-solid-svg-icons";
 
 //Imported functions
@@ -69,6 +71,14 @@ const Player = ({
       await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
       activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
     }
+    if (direction === "random") {
+      await setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
+      activeLibraryHandler(songs[Math.floor(Math.random() * songs.length)]);
+    }
+    if (direction === "loop") {
+      if (currentSong.id === songs[0].id) await setCurrentSong(songs[0]);
+      audioRef.current.currentTime = 0;
+    }
     if (direction === "skip-back") {
       if ((currentIndex - 1) % songs.length === -1) {
         await setCurrentSong(songs[songs.length - 1]);
@@ -81,6 +91,7 @@ const Player = ({
     }
     if (isPlaying) audioRef.current.play();
   };
+
   return (
     <div className="player">
       <div className="time-control">
@@ -95,6 +106,12 @@ const Player = ({
         <p>{SongInfo.duration ? getTime(SongInfo.duration) : "0:00"}</p>
       </div>
       <div className="play-control">
+        <FontAwesomeIcon
+          icon={faRandom}
+          size="2x"
+          className="random"
+          onClick={() => skipTrackHandler("random")}
+        ></FontAwesomeIcon>
         <FontAwesomeIcon
           onClick={() => skipTrackHandler("skip-back")}
           className="skip-back"
@@ -114,6 +131,12 @@ const Player = ({
           size="2x"
           icon={faAngleRight}
         />
+        <FontAwesomeIcon
+          icon={faRedo}
+          className="loop"
+          onClick={() => skipTrackHandler("loop")}
+          size="2x"
+        ></FontAwesomeIcon>
       </div>
 
       {/* Audio has its own event conditions */}

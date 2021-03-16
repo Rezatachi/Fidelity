@@ -245,6 +245,30 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
+    {
+      name: "in your arms.",
+      cover: "https://i1.sndcdn.com/artworks-000142003041-z7ngg4-t500x500.jpg",
+      artist: <a href="https://soundcloud.com/saib_eats">saib</a>,
+      audio:
+        "https://docs.google.com/uc?export=open&id=1ycdcMlO4ncjijXJRLc3-UzB-9-a6PJ15",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "aruarian dance",
+      cover: "https://i1.sndcdn.com/artworks-000010633044-0pecn0-t500x500.jpg",
+      artist: (
+        <a href="https://open.spotify.com/artist/3Rq3YOF9YG9YfCWD4D56RZ">
+          nujabes
+        </a>
+      ),
+      audio:
+        "https://docs.google.com/uc?export=open&id=1vW9PM1Lm4G8peX1794pDxEQqm9U12Zxc",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
   ];
 }
 
