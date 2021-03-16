@@ -15,7 +15,7 @@ const Nav = ({ libraryStatus, setlibraryStatus }) => {
 
       <div className="btn">
         <CleanButton
-          style={{ outline: "none", border: "none" }}
+          style={{ outline: "none", border: "none", cursor: "pointer" }}
           isPrimary
           onClick={() => setlibraryStatus(!libraryStatus)}
         >
