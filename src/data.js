@@ -187,7 +187,7 @@ function chillHop() {
       cover: "https://i1.sndcdn.com/artworks-000090875546-igglgs-t500x500.jpg",
       artist: <a href="https://soundcloud.com/jinsangbeats">jinsang</a>,
       audio:
-        "https://cf-media.sndcdn.com/IdWoprAl4fut.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vSWRXb3ByQWw0ZnV0LjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTU4MzM3NzZ9fX1dfQ__&Signature=OQZqDMEKgd9qLYtAGxVmYW7gzheqU~3vSef8fcioIh78CtEBCbYbzL2vwv9wizXZkL9RM-xEYFVddSG07Ky6ctDzPaxz~G38uiVloct~ZrZ9ktdicLfJemmv~dA6XzoW7~8L0br-yAclgX-OHoNqaHPA6vFs~rJ-5weWXMpmoc3d3~JzqFwxYiHQYXv4upjltSERv941I2gz2a3PmR~KYFuj8atGOa5zcm8YZ2ZpLglopP5dJF0iYbWxgzwqJ71eT8AX1PTcLkmnx3UuJuBYianiS-41ao5GByV1ipWBCyfVRWF6yVwYMYtS~UoOnWdL9v0jIuETqh5fLK4G1PpjbQ__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "https://docs.google.com/uc?export=open&id=1wN9D8-AMUvKtw9IQkbQquuseM-LRpvdm",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
       active: false,
@@ -201,7 +201,7 @@ function chillHop() {
         </a>
       ),
       audio:
-        "https://cf-media.sndcdn.com/IOOxhxW5qMmd.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vSU9PeGh4VzVxTW1kLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTU4MzM5OTh9fX1dfQ__&Signature=Y9v8PiL-30yFaNv0db3rP-1zMOt7TVFk2LJ~BHieJbZSssM9Eel6kMB-HHUu0CLc1z064JiaccM2yoVnTr01c2XbqIA5pDtz7l5fdQIYLhuU-up4fESh6D~A~hh7FCtlZkpm2UFmm3n2Gxar~WJANsrCvXtarY4C7zO3ZNP-h4S6ApL7LL-ZchhVnmFLxdr45dYHCvuFeLcUt7Znu2oBvmoDHmfYxphJgCvJ6Oo3CHizrIKqkW3BkNCyYnmHt7b9xqpZdENcaI-KBTHCjZFf0yQNdyX3d-Us78d1DW70Wr37uoXWTPqD0~OXfLAgS9zPIH9zvRB2jj8RVaH3lmpkIg__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "https://docs.google.com/uc?export=open&id=17UTvXPbBqrpuqA35CwFDzO5a_dIg8abX",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
       active: false,
@@ -216,7 +216,7 @@ function chillHop() {
         </a>
       ),
       audio:
-        "https://cf-media.sndcdn.com/A1uGAJJKuWat.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vQTF1R0FKSkt1V2F0LjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTU4MzQyMDR9fX1dfQ__&Signature=LpaIvYVTGQ49r1a7acS9iBXTQC7U4tPuZMcuoOtIo82Vn0WFNtBBlO2oBp1VPdLgOk-mM7PiktpokA4ptqSYQoa~aN67QeF~wmYZ9Hdk4rsDuU1tV6CWHN7nXN2IUbN63nRsMNj4dhtl3v3xxMUHgchUbvGrWU8~TPa5-n5GylTTLFHmdFrZEKGgVCRbmC1EuWsar5-xge6-7K2RtZt0XcyqixAon4Uk6Hoy84CyjnBmlunz87AEJnI0-pf7jWIYE~wDO4FS1Y2dgPn-gfjPtEujy8fjYsq2WW~c8kG17~gpgswUOrb1F8VWnNdTOOD8BvqocH7iDbjf1RblpRuMUg__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "https://docs.google.com/uc?export=open&id=1skZRFYdLQGbKaxkVtkH1JOHRVQd-frwh",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
       active: false,
@@ -226,7 +226,21 @@ function chillHop() {
       cover: "https://i1.sndcdn.com/artworks-000275519618-n7medz-original.jpg",
       artist: <a href="https://soundcloud.com/tkovrr">mt.tkovr.</a>,
       audio:
-        "https://cf-media.sndcdn.com/H8mRM0oUOd7b.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vSDhtUk0wb1VPZDdiLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTU4NTI5NTN9fX1dfQ__&Signature=P0TJ-RapMdzUJa561A3h0NKte~3S3zdgrLv-L8Pt~6d3hiixzdRWQeREpkeWYzVktQQ03LGVi5ac998v8cBurL0r3hIfGm-S6jJ~TZY10yMlKF0nvLxg64p66IvbNTMLbWks9PqtiKT-oMnnH5TctySLdjgkBWYMBAxzq-JSvN~cghNyGCiaJra2FGYKaW5jwcJl4VZCAImUoKU54XTevUp~4SVt6uHwXX0rimRWDsJHYkReWGjfAbrBVyfCUXU0Zne8twWSCyyVKU6SaV~qnSR5UBgn49duKr2tu1iYW~2ZK8OdtLbe8xgCasRDTSBaEstZGNLB1YUV~r6FAzsIyQ__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "https://docs.google.com/uc?export=open&id=12rIaOmeJN0NHGlfy7dOW38nfEkzxQtXf",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "feather",
+      cover: "https://upload.wikimedia.org/wikipedia/en/5/56/ModalMusic.jpg",
+      artist: (
+        <a href="https://open.spotify.com/artist/3Rq3YOF9YG9YfCWD4D56RZ">
+          nujabes
+        </a>
+      ),
+      audio:
+        "https://docs.google.com/uc?export=open&id=1IUXJ8iyroBcrEGDtREs14clRxMLXP4ip",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
       active: false,
