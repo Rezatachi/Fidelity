@@ -269,6 +269,36 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
+    {
+      name: "just friends",
+      cover:
+        "https://images.genius.com/ba3baa59755a9f7cc558972ce5f9bae2.630x630x1.jpg",
+      artist: (
+        <a href="https://open.spotify.com/artist/5XE0fiZWGbq9TcSuWwJ1fA">
+          potsu
+        </a>
+      ),
+      audio:
+        "https://docs.google.com/uc?export=open&id=1zOtXGO7X11yznfHy_bGSS5AfPkCUXMvX",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "summer nights.",
+      cover:
+        "https://geo-media.beatport.com/image_size/500x500/cdd0d945-7356-4e6f-a2c7-068c4ce95e63.jpg",
+      artist: (
+        <a href="https://open.spotify.com/artist/5XE0fiZWGbq9TcSuWwJ1fA">
+          nion
+        </a>
+      ),
+      audio:
+        "https://docs.google.com/uc?export=open&id=1HvPsBxmZb2rJXFmu1Bk3KSIl9tY27Swq",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
   ];
 }
 
