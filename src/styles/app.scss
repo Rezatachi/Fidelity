@@ -36,6 +36,17 @@ body {
   width: 100%;
   height: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  nav {
+    .lib-btn {
+      z-index: 10;
+    }
+  }
+  .library-active {
+    margin-left: 0;
+  }
+}
 @import "./song";
 @import "./player";
 @import "./nav";
