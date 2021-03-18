@@ -1,48 +1,77 @@
 .player {
-    min-height: 10vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.time-control {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  input {
+    width: 100%;
+    -webkit-appearance: none;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    cursor: pointer;
+    outline: none;
   }
-  
+
+  p {
+    padding: 1rem;
+  }
+}
+.play-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 3;
+
+  width: 40%;
+
+  svg {
+    cursor: pointer;
+  }
+}
+.backboi {
+  &:hover {
+    color: #8a47ee;
+  }
+}
+.playboi {
+  &:hover {
+    color: #8a47ee;
+  }
+}
+.forwardboi {
+  &:hover {
+    color: #8a47ee;
+  }
+}
+.shuffleboi {
+  &:hover {
+    color: #8a47ee;
+  }
+}
+.loopboi {
+  &:hover {
+    color: #8a47ee;
+  }
+  &:focus {
+    background: orange;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .time-control {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    input {
-      width: 100%;
-      -webkit-appearance: none;
-      background: rgba(0,0 , 0, 0.1);
-      border-radius: 2rem;
-      cursor: pointer;
-      outline: none;
-    }
-  
-    p {
-      padding: 1rem;
-    }
+    width: 90%;
   }
   .play-control {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  
-    width: 40%;
-    svg {
-      cursor: pointer;
-    }
-  }
-  
-
-  @media screen and (max-width: 768px){
-  .time-control{
-  width:90%;
-    }
-  .play-control{
     width: 60%;
-    }
   }
-
- 
+}

@@ -8,8 +8,8 @@ import {
   faRandom,
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
+import { useAlert } from "react-alert";
 
-//Imported functions
 const Player = ({
   currentSong,
   isPlaying,
@@ -22,7 +22,6 @@ const Player = ({
   setsongs,
 }) => {
   // The dangers of use effect^:: The UseEffect will still run, causing unneccsary actions. In this case, the player.js and the libsong js use the same code causing useEffect to update twice.
-
   const activeLibraryHandler = (nextPrev) => {
     const newSongs = songs.map((song) => {
       if (song.id === nextPrev.id) {
@@ -41,11 +40,14 @@ const Player = ({
     setsongs(newSongs);
   };
   //Events
+  const alert = useAlert();
+
   const playSongHandler = () => {
     if (isPlaying) {
       audioRef.current.pause();
       setisPlaying(!isPlaying);
     } else {
+      audioRef.current.volume = 1;
       audioRef.current.play();
       setisPlaying(!isPlaying);
     }
@@ -70,24 +72,34 @@ const Player = ({
     if (direction === "skip-forward") {
       await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
       activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
+      audioRef.current.loop = false;
+      console.log(audioRef.current.loop);
     }
     if (direction === "random") {
       await setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
       activeLibraryHandler(songs[Math.floor(Math.random() * songs.length)]);
+      alert.show("Shuffle enabled.");
     }
-    if (direction === "loop") {
-      if (currentSong.id === songs[0].id) await setCurrentSong(songs[0]);
-      audioRef.current.currentTime = 0;
-    }
+
     if (direction === "skip-back") {
       if ((currentIndex - 1) % songs.length === -1) {
         await setCurrentSong(songs[songs.length - 1]);
         activeLibraryHandler(songs[songs.length - 1]);
         if (isPlaying) audioRef.current.play();
+        audioRef.current.loop = false;
         return;
       }
       await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
       activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
+    }
+
+    if (direction === "loop") {
+      if (currentSong.id === songs[0].id) {
+        await setCurrentSong(songs[0]);
+        audioRef.current.loop = true;
+        console.log(audioRef.current.loop);
+        alert.show("Loop enabled.");
+      }
     }
     if (isPlaying) audioRef.current.play();
   };
@@ -106,37 +118,47 @@ const Player = ({
         <p>{SongInfo.duration ? getTime(SongInfo.duration) : "0:00"}</p>
       </div>
       <div className="play-control">
-        <FontAwesomeIcon
-          icon={faRandom}
-          size="2x"
-          className="random"
-          onClick={() => skipTrackHandler("random")}
-        ></FontAwesomeIcon>
-        <FontAwesomeIcon
-          onClick={() => skipTrackHandler("skip-back")}
-          className="skip-back"
-          size="2x"
-          icon={faAngleLeft}
-        />
+        <div className="shuffleboi">
+          <FontAwesomeIcon
+            icon={faRandom}
+            size="2x"
+            className="random"
+            onClick={() => skipTrackHandler("random")}
+          ></FontAwesomeIcon>
+        </div>
+        <div className="backboi">
+          <FontAwesomeIcon
+            onClick={() => skipTrackHandler("skip-back")}
+            className="skip-back"
+            size="2x"
+            icon={faAngleLeft}
+          />
+        </div>
         {/* Using the ()=> cause i just want to invoke it rather that instanly use it. */}
-        <FontAwesomeIcon
-          className="play"
-          onClick={playSongHandler}
-          size="2x"
-          icon={isPlaying ? faPause : faPlay}
-        />
-        <FontAwesomeIcon
-          onClick={() => skipTrackHandler("skip-forward")}
-          className="skip-forward"
-          size="2x"
-          icon={faAngleRight}
-        />
-        <FontAwesomeIcon
-          icon={faRedo}
-          className="loop"
-          onClick={() => skipTrackHandler("loop")}
-          size="2x"
-        ></FontAwesomeIcon>
+        <div className="playboi">
+          <FontAwesomeIcon
+            className="play"
+            onClick={playSongHandler}
+            size="2x"
+            icon={isPlaying ? faPause : faPlay}
+          />
+        </div>
+        <div className="forwardboi">
+          <FontAwesomeIcon
+            onClick={() => skipTrackHandler("skip-forward")}
+            className="skip-forward"
+            size="2x"
+            icon={faAngleRight}
+          />
+        </div>
+        <div className="loopboi">
+          <FontAwesomeIcon
+            icon={faRedo}
+            className="loop"
+            onClick={() => skipTrackHandler("loop")}
+            size="2x"
+          ></FontAwesomeIcon>
+        </div>
       </div>
 
       {/* Audio has its own event conditions */}

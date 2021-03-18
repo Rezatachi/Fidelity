@@ -5,9 +5,12 @@ import chillhop from "./data";
 import Nav from "./components/nav";
 import Library from "./components/library";
 import BaseSec from "./components/footer";
+import Night from "./components/themes/particles";
 import "./styles/app.scss";
 //imported libraries
 import { SenseiProvider, themeDark as theme } from "react-sensei";
+import Scrollbar from "react-perfect-scrollbar";
+import { isDesktop } from "react-device-detect";
 
 function App() {
   const audioRef = useRef(0);
@@ -32,47 +35,104 @@ function App() {
     if (isPlaying) audioRef.current.play();
     return;
   };
-  return (
-    <SenseiProvider theme={theme}>
-      <div className={`App ${libraryStatus ? "library-active" : ""}`}>
-        <Nav
-          theme={theme}
-          libraryStatus={libraryStatus}
-          setlibraryStatus={setlibraryStatus}
-        />
-        <div>
-          <Song currentSong={currentSong} />
-          <Player
-            setsongs={setsongs}
-            songs={songs}
-            SongInfo={SongInfo}
-            setSongInfo={setSongInfo}
-            audioRef={audioRef}
-            setisPlaying={setisPlaying}
-            currentSong={currentSong}
-            setCurrentSong={setCurrentSong}
-            isPlaying={isPlaying}
-          />
-          <BaseSec />
-          <Library
-            libraryStatus={libraryStatus}
-            setsongs={setsongs}
-            audioRef={audioRef}
-            isPlaying={isPlaying}
-            songs={songs}
-            setCurrentSong={setCurrentSong}
-          />
+
+  return isDesktop ? (
+    <Scrollbar>
+      <SenseiProvider theme={theme}>
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Night />
         </div>
-        <audio
-          onTimeUpdate={timeUpdateHandler}
-          ref={audioRef}
-          src={currentSong.audio}
-          onLoadedMetadata={timeUpdateHandler}
-          onEnded={songEndHandler}
-          //Basically LoadedMeta Data looks like this when the song information loads into react, it fetches the number instantaneously
-        ></audio>
-      </div>
-    </SenseiProvider>
+        <div className={`App ${libraryStatus ? "library-active" : ""}`}>
+          <Nav
+            theme={theme}
+            libraryStatus={libraryStatus}
+            setlibraryStatus={setlibraryStatus}
+          />
+          <div>
+            <Song currentSong={currentSong} />
+            <Player
+              setsongs={setsongs}
+              songs={songs}
+              SongInfo={SongInfo}
+              setSongInfo={setSongInfo}
+              audioRef={audioRef}
+              setisPlaying={setisPlaying}
+              currentSong={currentSong}
+              setCurrentSong={setCurrentSong}
+              isPlaying={isPlaying}
+            />
+            <BaseSec />
+            <Library
+              libraryStatus={libraryStatus}
+              setsongs={setsongs}
+              audioRef={audioRef}
+              isPlaying={isPlaying}
+              songs={songs}
+              setCurrentSong={setCurrentSong}
+            />
+          </div>
+          <audio
+            onTimeUpdate={timeUpdateHandler}
+            ref={audioRef}
+            src={currentSong.audio}
+            onLoadedMetadata={timeUpdateHandler}
+            onEnded={songEndHandler}
+            //Basically LoadedMeta Data looks like this when the song information loads into react, it fetches the number instantaneously
+          ></audio>
+        </div>
+      </SenseiProvider>
+    </Scrollbar>
+  ) : (
+    <div className="normalScrollbar">
+      <SenseiProvider theme={theme}>
+        <div className={`App ${libraryStatus ? "library-active" : ""}`}>
+          <Nav
+            theme={theme}
+            libraryStatus={libraryStatus}
+            setlibraryStatus={setlibraryStatus}
+          />
+          <div>
+            <Song currentSong={currentSong} />
+            <Player
+              setsongs={setsongs}
+              songs={songs}
+              SongInfo={SongInfo}
+              setSongInfo={setSongInfo}
+              audioRef={audioRef}
+              setisPlaying={setisPlaying}
+              currentSong={currentSong}
+              setCurrentSong={setCurrentSong}
+              isPlaying={isPlaying}
+            />
+            <BaseSec />
+            <Library
+              libraryStatus={libraryStatus}
+              setsongs={setsongs}
+              audioRef={audioRef}
+              isPlaying={isPlaying}
+              songs={songs}
+              setCurrentSong={setCurrentSong}
+            />
+          </div>
+          <audio
+            onTimeUpdate={timeUpdateHandler}
+            ref={audioRef}
+            src={currentSong.audio}
+            onLoadedMetadata={timeUpdateHandler}
+            onEnded={songEndHandler}
+            //Basically LoadedMeta Data looks like this when the song information loads into react, it fetches the number instantaneously
+          ></audio>
+        </div>
+      </SenseiProvider>
+    </div>
   );
 }
 
