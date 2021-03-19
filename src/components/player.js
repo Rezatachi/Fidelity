@@ -94,12 +94,9 @@ const Player = ({
     }
 
     if (direction === "loop") {
-      if (currentSong.id === songs[0].id) {
-        await setCurrentSong(songs[0]);
-        audioRef.current.loop = true;
-        console.log(audioRef.current.loop);
-        alert.show("Loop enabled.");
-      }
+      audioRef.current.loop = true;
+      console.log(audioRef.current.loop);
+      alert.show("Loop enabled.");
     }
     if (isPlaying) audioRef.current.play();
   };
