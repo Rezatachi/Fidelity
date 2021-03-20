@@ -78,7 +78,6 @@ const Player = ({
     if (direction === "random") {
       await setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
       activeLibraryHandler(songs[Math.floor(Math.random() * songs.length)]);
-      alert.show("Shuffle enabled.");
     }
 
     if (direction === "skip-back") {

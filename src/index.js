@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { transitions, positions, Provider as AlertProvider } from "react-alert";
-import AlertTemplate from "react-alert-template-oldschool-dark";
+import AlertTemplate from "react-alert-template-basic";
 
 // optional configuration
 const options = {

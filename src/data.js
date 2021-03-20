@@ -103,6 +103,16 @@ function chillHop() {
       active: false,
     },
     {
+      name: "spike spiegel",
+      cover: "https://i1.sndcdn.com/artworks-000233367422-r7x8pe-t500x500.jpg",
+      artist: <a href="https://soundcloud.com/saib_eats">Saib</a>,
+      audio:
+        "https://docs.google.com/uc?export=open&id=1sYMacAWMLTY4TTbK0JxXiWkkKDOZ3VOc",
+      color: ["#FDF9F1", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
       name: "flashback",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
