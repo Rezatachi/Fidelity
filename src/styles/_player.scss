@@ -5,6 +5,14 @@
   align-items: center;
   justify-content: space-between;
   z-index: 3;
+  input {
+    width: 20%;
+    -webkit-appearance: none;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    cursor: pointer;
+    outline: none;
+  }
 }
 
 .time-control {

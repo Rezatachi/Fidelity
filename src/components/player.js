@@ -20,6 +20,8 @@ const Player = ({
   songs,
   setCurrentSong,
   setsongs,
+  volume,
+  setvolume,
 }) => {
   // The dangers of use effect^:: The UseEffect will still run, causing unneccsary actions. In this case, the player.js and the libsong js use the same code causing useEffect to update twice.
   const activeLibraryHandler = (nextPrev) => {
@@ -47,12 +49,15 @@ const Player = ({
       audioRef.current.pause();
       setisPlaying(!isPlaying);
     } else {
-      audioRef.current.volume = 1;
       audioRef.current.play();
       setisPlaying(!isPlaying);
     }
   };
-
+  const handleVolume = (e) => {
+    setvolume(e);
+    audioRef.current.volume = e;
+    console.log(audioRef.current.volume);
+  };
   const getTime = (time) => {
     return (
       Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
@@ -155,6 +160,13 @@ const Player = ({
             size="2x"
           ></FontAwesomeIcon>
         </div>
+        <input
+          value={audioRef.current.volume}
+          type="range"
+          onChange={(e) => handleVolume(e.target.value / 100)}
+          onChangeComplete={(value) => console.log(value)}
+          step={1}
+        />
       </div>
 
       {/* Audio has its own event conditions */}
