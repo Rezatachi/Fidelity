@@ -5,13 +5,16 @@
   align-items: center;
   justify-content: space-between;
   z-index: 3;
-  input {
-    width: 20%;
+  .Volumer input[type="range"] {
+    width: 100%;
     -webkit-appearance: none;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(22, 21, 21, 0.534);
     border-radius: 2rem;
     cursor: pointer;
     outline: none;
+  }
+  .Volumer p {
+    color: #ccc;
   }
 }
 
