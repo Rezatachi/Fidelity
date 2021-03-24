@@ -167,7 +167,7 @@ const Player = ({
             onChange={(e) => handleVolume(e.target.value / 100)}
             step={1}
           />
-          <p>Feel the volume.</p>
+        
         </div>
       </div>
 
