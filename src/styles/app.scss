@@ -36,7 +36,28 @@ body {
   width: 100%;
   height: 100%;
 }
-
+.theme-container {
+  min-height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.themer {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  color: white;
+  background-color: #343239;
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+  transition: 0.1s ease-in;
+  &:hover {
+    background-color: #55505f;
+  }
+}
 @media screen and (max-width: 768px) {
   nav {
     .lib-btn {

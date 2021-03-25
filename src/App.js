@@ -1,18 +1,33 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Player from "./components/player";
 import Song from "./components/song";
 import chillhop from "./data";
 import Nav from "./components/nav";
 import Library from "./components/library";
 import BaseSec from "./components/footer";
-import Night from "./components/themes/particles";
 import "./styles/app.scss";
 //imported libraries
-import { SenseiProvider, themeDark as theme } from "react-sensei";
+import { SenseiProvider, themeDark, themeLightBlue } from "react-sensei";
 
 function App() {
   const audioRef = useRef(0);
   //State
+  const [themeset, setthemeset] = useState("light");
+  const toggleTheme = () => {
+    if (themeset === "dark") {
+      setthemeset("light");
+    } else {
+      setthemeset("dark");
+    }
+  };
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+    if (localTheme) {
+      setthemeset(localTheme);
+    }
+  }, []);
+
   const [volume, setvolume] = useState(0.3);
   const [songs, setsongs] = useState(chillhop());
   const [currentSong, setCurrentSong] = useState(songs[0]);
@@ -21,7 +36,7 @@ function App() {
     currentTime: 0,
     duration: 0,
   });
-  const [libraryStatus, setlibraryStatus] = useState(false);
+  const [libraryStatus, setlibraryStatus] = useState();
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime;
     const duration = e.target.duration;
@@ -36,24 +51,13 @@ function App() {
   };
 
   return (
-    <SenseiProvider theme={theme}>
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-        }}
-      >
-        <Night />
-      </div>
+    <SenseiProvider theme={themeset === "dark" ? themeLightBlue : themeDark}>
       <div className={`App ${libraryStatus ? "library-active" : ""}`}>
         <Nav
-          theme={theme}
           libraryStatus={libraryStatus}
           setlibraryStatus={setlibraryStatus}
         />
+
         <div>
           <Song currentSong={currentSong} isPlaying={isPlaying} />
           <Player
@@ -68,9 +72,15 @@ function App() {
             isPlaying={isPlaying}
             volume={volume}
             setvolume={setvolume}
-          />
+          />{" "}
+          <div className="theme-container">
+            <button className="themer" onClick={toggleTheme}>
+              Change Theme
+            </button>
+          </div>
           <BaseSec />
           <Library
+            theme={themeset === "dark" ? themeLightBlue : themeDark}
             libraryStatus={libraryStatus}
             setsongs={setsongs}
             audioRef={audioRef}

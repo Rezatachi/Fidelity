@@ -12,7 +12,9 @@ const Song = ({ currentSong, isPlaying }) => {
           alt={currentSong.name}
         ></img>
         <h2>{currentSong.name}</h2>
-        <h3>{currentSong.artist}</h3>
+        <div className="artist-fixer">
+          <h3>{currentSong.artist}</h3>
+        </div>
       </div>
     </div>
   );
