@@ -5,7 +5,6 @@ import chillhop from "./data";
 import Nav from "./components/nav";
 import Library from "./components/library";
 import BaseSec from "./components/footer";
-import Night from "./components/themes/particles";
 import "./styles/app.scss";
 //imported libraries
 import { SenseiProvider, themeDark, themeLightBlue } from "react-sensei";
