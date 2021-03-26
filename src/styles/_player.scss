@@ -8,7 +8,7 @@
   .Volumer input[type="range"] {
     width: 100%;
     -webkit-appearance: none;
-    background: rgba(22, 21, 21, 0.534);
+    background: rgba(22, 21, 21, 0.116);
     border-radius: 2rem;
     cursor: pointer;
     outline: none;
@@ -26,7 +26,7 @@
   input {
     width: 100%;
     -webkit-appearance: none;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.11);
     border-radius: 2rem;
     cursor: pointer;
     outline: none;
@@ -43,7 +43,7 @@
   padding: 1rem;
   z-index: 3;
 
-  width: 40%;
+  width: 60%;
 
   svg {
     cursor: pointer;

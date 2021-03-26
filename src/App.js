@@ -5,18 +5,22 @@ import chillhop from "./data";
 import Nav from "./components/nav";
 import Library from "./components/library";
 import BaseSec from "./components/footer";
+import Night from "./components/themes/particles";
 import "./styles/app.scss";
 //imported libraries
 import { SenseiProvider, themeDark, themeLightBlue } from "react-sensei";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
 function App() {
   const audioRef = useRef(0);
   //State
   const [themeset, setthemeset] = useState("light");
   const toggleTheme = () => {
     if (themeset === "dark") {
+      localStorage.setItem("theme", "light");
       setthemeset("light");
     } else {
+      localStorage.setItem("theme", "dark");
       setthemeset("dark");
     }
   };
@@ -56,6 +60,8 @@ function App() {
         <Nav
           libraryStatus={libraryStatus}
           setlibraryStatus={setlibraryStatus}
+          themeset={themeset}
+          setthemeset={themeset}
         />
 
         <div>
@@ -75,7 +81,7 @@ function App() {
           />{" "}
           <div className="theme-container">
             <button className="themer" onClick={toggleTheme}>
-              Change Theme
+              <FontAwesomeIcon icon={faMoon}></FontAwesomeIcon>
             </button>
           </div>
           <BaseSec />

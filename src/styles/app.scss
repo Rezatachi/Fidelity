@@ -37,8 +37,11 @@ body {
   height: 100%;
 }
 .theme-container {
-  min-height: 10vh;
+  position: fixed;
   width: 100%;
+  min-height: 12vh;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,13 +49,12 @@ body {
 .themer {
   cursor: pointer;
   font-size: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   border-radius: 20px;
   color: white;
   background-color: #343239;
   outline: none;
   border: none;
-  margin-top: 1rem;
   transition: 0.1s ease-in;
   &:hover {
     background-color: #55505f;
@@ -67,7 +69,11 @@ body {
   .library-active {
     margin-left: 0;
   }
+  .theme-container {
+    display: none;
+  }
 }
+
 @import "./song";
 @import "./player";
 @import "./nav";
