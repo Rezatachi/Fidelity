@@ -1,10 +1,10 @@
 import { v4 as uuidv4 } from "uuid";
-import React from "react";
+
 function chillHop() {
   return [
     {
       name: "sleepover",
-      artist: <a href="https://soundcloud.com/nymano">Nymano, JK the Sage</a>,
+      artist: "Nymano, JK the Sage",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/09/09fb436604242df99f84b9f359acb046e40d2e9e-1024x1024.jpg",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10130",
@@ -16,11 +16,8 @@ function chillHop() {
       name: "beaver creek",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-      artist: (
-        <a href="https://soundcloud.com/chillhopdotcom/middle-school-aso-aviino-canary-forest-full-ep">
-          Aso, Aviino
-        </a>
-      ),
+      artist: "Aso, Aviino",
+
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
@@ -30,7 +27,7 @@ function chillHop() {
       name: "daylight",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-      artist: <a href="https://chillhop.com/artists/3429-aiguille/">Aigulle</a>,
+      artist: "Aigulle",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
       color: ["#EF8EA9", "#ab417f"],
       id: uuidv4(),
@@ -40,7 +37,7 @@ function chillHop() {
       name: "keep going",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
-      artist: <a href="https://chillhop.com/artists/121-sworn/">Swørn</a>,
+      artist: "Swørn",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9222",
       color: ["#CD607D", "#c94043"],
       id: uuidv4(),
@@ -50,7 +47,7 @@ function chillHop() {
       name: "nightfall",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-      artist: <a href="https://chillhop.com/artists/3429-aiguille/">Aigulle</a>,
+      artist: "Aigulle",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9148",
       color: ["#EF8EA9", "#ab417f"],
       id: uuidv4(),
@@ -60,7 +57,7 @@ function chillHop() {
       name: "reflection",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
-      artist: <a href="https://chillhop.com/artists/121-sworn/">Swørn</a>,
+      artist: "Swørn",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9228",
       color: ["#CD607D", "#c94043"],
       id: uuidv4(),
@@ -70,11 +67,8 @@ function chillHop() {
       name: "under the city stars",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-      artist: (
-        <a href="https://soundcloud.com/chillhopdotcom/middle-school-aso-aviino-canary-forest-full-ep">
-          Aso, Aviino
-        </a>
-      ),
+      artist: "  Aso, Aviino",
+
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
@@ -83,7 +77,7 @@ function chillHop() {
     {
       name: "beyond clouds",
       cover: "https://i.scdn.co/image/ab67616d0000b273ad6728c62a2f771a0c5af67d",
-      artist: <a href="https://soundcloud.com/saib_eats">Saib</a>,
+      artist: "Saib",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9297",
       color: ["#EEC9D1", "#708AA7"],
       id: uuidv4(),
@@ -92,11 +86,8 @@ function chillHop() {
     {
       name: "who knows",
       cover: "https://i.scdn.co/image/ab67616d0000b27380873d54dde9a81963be71b2",
-      artist: (
-        <a href="https://chillhop.com/releases/psalm-trees-guillaume-muschalle-we-must-believe-in-spring/">
-          Psalm Trees, Guillaume Muschalle
-        </a>
-      ),
+      artist: " Psalm Trees, Guillaume Muschalle",
+
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10553",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
@@ -105,7 +96,7 @@ function chillHop() {
     {
       name: "spike spiegel",
       cover: "https://i1.sndcdn.com/artworks-000233367422-r7x8pe-t500x500.jpg",
-      artist: <a href="https://soundcloud.com/saib_eats">Saib</a>,
+      artist: "Saib",
       audio:
         "https://docs.google.com/uc?export=open&id=1sYMacAWMLTY4TTbK0JxXiWkkKDOZ3VOc",
       color: ["#FDF9F1", "#000000"],
@@ -116,7 +107,7 @@ function chillHop() {
       name: "flashback",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
-      artist: <a href="https://soundcloud.com/bluewednesday">Blue Wednesday</a>,
+      artist: "Blue Wednesday",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=11225",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
@@ -126,7 +117,7 @@ function chillHop() {
       name: "toofpick",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
-      artist: <a href="https://soundcloud.com/bluewednesday">Blue Wednesday</a>,
+      artist: "Blue Wednesday",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=11227",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
@@ -136,7 +127,7 @@ function chillHop() {
       name: "déjà vu",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
-      artist: <a href="https://soundcloud.com/bluewednesday">Blue Wednesday</a>,
+      artist: "Blue Wednesday",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=11229",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
@@ -146,7 +137,7 @@ function chillHop() {
       name: "day one",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
-      artist: <a href="https://soundcloud.com/bluewednesday">Blue Wednesday</a>,
+      artist: "Blue Wednesday",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=11231",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
@@ -156,7 +147,7 @@ function chillHop() {
       name: "murmuration",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/12/33a2a875828118a3ff260638a88362936104879a-1024x1024.jpg",
-      artist: <a href="https://soundcloud.com/bluewednesday">Blue Wednesday</a>,
+      artist: "Blue Wednesday",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=7814",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
@@ -166,7 +157,7 @@ function chillHop() {
       name: "dancing droplets",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/09/88e7eb711f8c71d87fc102e97cf91e36f692348d-1024x1024.jpg",
-      artist: <a href="https://soundcloud.com/bluewednesday">Blue Wednesday</a>,
+      artist: "Blue Wednesday",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9915",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
@@ -176,7 +167,7 @@ function chillHop() {
       name: "zenith",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/09/88e7eb711f8c71d87fc102e97cf91e36f692348d-1024x1024.jpg",
-      artist: <a href="https://soundcloud.com/bluewednesday">Blue Wednesday</a>,
+      artist: "Blue Wednesday",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9927",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
@@ -186,7 +177,7 @@ function chillHop() {
       name: "life is a dream",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/06/faa452681fe33146c42a1b422fdf7cd7fd082637-1024x1024.jpg",
-      artist: <a href="https://chillhop.com/artists/2316-xander/">xander.</a>,
+      artist: "xander.",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9392",
       color: ["#FDF9F1", "#000000"],
       id: uuidv4(),
@@ -195,7 +186,7 @@ function chillHop() {
     {
       name: "summer's day v2",
       cover: "https://i1.sndcdn.com/artworks-000090875546-igglgs-t500x500.jpg",
-      artist: <a href="https://soundcloud.com/jinsangbeats">jinsang</a>,
+      artist: "jinsang",
       audio:
         "https://docs.google.com/uc?export=open&id=1wN9D8-AMUvKtw9IQkbQquuseM-LRpvdm",
       color: ["#FDF9F1", "#000000"],
@@ -205,11 +196,8 @@ function chillHop() {
     {
       name: "battlecry",
       cover: "https://i1.sndcdn.com/artworks-000108848144-pl754v-t500x500.jpg",
-      artist: (
-        <a href="https://open.spotify.com/artist/3Rq3YOF9YG9YfCWD4D56RZ">
-          nujabes
-        </a>
-      ),
+      artist: "nujabes",
+
       audio:
         "https://docs.google.com/uc?export=open&id=17UTvXPbBqrpuqA35CwFDzO5a_dIg8abX",
       color: ["#FDF9F1", "#000000"],
@@ -220,11 +208,7 @@ function chillHop() {
       name: "counting stars",
       cover:
         "https://images.genius.com/443f74354b61b8c99cb523444a0fd89b.500x500x1.jpg",
-      artist: (
-        <a href="https://open.spotify.com/artist/3Rq3YOF9YG9YfCWD4D56RZ">
-          nujabes
-        </a>
-      ),
+      artist: "nujabes",
       audio:
         "https://docs.google.com/uc?export=open&id=1skZRFYdLQGbKaxkVtkH1JOHRVQd-frwh",
       color: ["#FDF9F1", "#000000"],
@@ -234,7 +218,7 @@ function chillHop() {
     {
       name: "brazìl",
       cover: "https://i1.sndcdn.com/artworks-000275519618-n7medz-original.jpg",
-      artist: <a href="https://soundcloud.com/tkovrr">mt.tkovr.</a>,
+      artist: "mt.tkovr.",
       audio:
         "https://docs.google.com/uc?export=open&id=12rIaOmeJN0NHGlfy7dOW38nfEkzxQtXf",
       color: ["#FDF9F1", "#000000"],
@@ -244,11 +228,7 @@ function chillHop() {
     {
       name: "feather",
       cover: "https://upload.wikimedia.org/wikipedia/en/5/56/ModalMusic.jpg",
-      artist: (
-        <a href="https://open.spotify.com/artist/3Rq3YOF9YG9YfCWD4D56RZ">
-          nujabes
-        </a>
-      ),
+      artist: " nujabes",
       audio:
         "https://docs.google.com/uc?export=open&id=1IUXJ8iyroBcrEGDtREs14clRxMLXP4ip",
       color: ["#FDF9F1", "#000000"],
@@ -258,7 +238,7 @@ function chillHop() {
     {
       name: "in your arms.",
       cover: "https://i1.sndcdn.com/artworks-000142003041-z7ngg4-t500x500.jpg",
-      artist: <a href="https://soundcloud.com/saib_eats">saib</a>,
+      artist: "saib",
       audio:
         "https://docs.google.com/uc?export=open&id=1ycdcMlO4ncjijXJRLc3-UzB-9-a6PJ15",
       color: ["#FDF9F1", "#000000"],
@@ -268,11 +248,7 @@ function chillHop() {
     {
       name: "aruarian dance",
       cover: "https://i1.sndcdn.com/artworks-000010633044-0pecn0-t500x500.jpg",
-      artist: (
-        <a href="https://open.spotify.com/artist/3Rq3YOF9YG9YfCWD4D56RZ">
-          nujabes
-        </a>
-      ),
+      artist: "nujabes",
       audio:
         "https://docs.google.com/uc?export=open&id=1vW9PM1Lm4G8peX1794pDxEQqm9U12Zxc",
       color: ["#FDF9F1", "#000000"],
@@ -283,11 +259,7 @@ function chillHop() {
       name: "just friends",
       cover:
         "https://images.genius.com/ba3baa59755a9f7cc558972ce5f9bae2.630x630x1.jpg",
-      artist: (
-        <a href="https://open.spotify.com/artist/5XE0fiZWGbq9TcSuWwJ1fA">
-          potsu
-        </a>
-      ),
+      artist: " potsu",
       audio:
         "https://docs.google.com/uc?export=open&id=1zOtXGO7X11yznfHy_bGSS5AfPkCUXMvX",
       color: ["#FDF9F1", "#000000"],
@@ -298,11 +270,7 @@ function chillHop() {
       name: "summer nights.",
       cover:
         "https://geo-media.beatport.com/image_size/500x500/cdd0d945-7356-4e6f-a2c7-068c4ce95e63.jpg",
-      artist: (
-        <a href="https://open.spotify.com/artist/5XE0fiZWGbq9TcSuWwJ1fA">
-          nion
-        </a>
-      ),
+      artist: "  nion",
       audio:
         "https://docs.google.com/uc?export=open&id=1HvPsBxmZb2rJXFmu1Bk3KSIl9tY27Swq",
       color: ["#FDF9F1", "#000000"],
