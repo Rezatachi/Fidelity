@@ -1,15 +1,11 @@
 import React from "react";
 import { CleanButton } from "react-sensei";
 import { Text } from "@chakra-ui/react";
+
 const Nav = ({ libraryStatus, setlibraryStatus }) => {
   return (
     <nav>
-      <Text
-        bgGradient="linear(to-l, gray,#008080)"
-        bgClip="text"
-        fontSize="3xl"
-        fontWeight="extrabold"
-      >
+      <Text fontSize="3xl" fontWeight="extrabold">
         Fidelity
       </Text>
 
@@ -19,7 +15,9 @@ const Nav = ({ libraryStatus, setlibraryStatus }) => {
           isPrimary
           onClick={() => setlibraryStatus(!libraryStatus)}
         >
-          <h1>Library</h1>
+          <Text fontSize="lg" fontWeight="extrabold">
+            Library
+          </Text>
         </CleanButton>
       </div>
     </nav>
