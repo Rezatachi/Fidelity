@@ -1,18 +1,17 @@
 import React from "react";
 import { CleanButton } from "react-sensei";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeadphones } from "@fortawesome/free-solid-svg-icons";
-
+import { Text } from "@chakra-ui/react";
 const Nav = ({ libraryStatus, setlibraryStatus }) => {
   return (
     <nav>
-      <h1>
+      <Text
+        bgGradient="linear(to-l, gray,#008080)"
+        bgClip="text"
+        fontSize="3xl"
+        fontWeight="extrabold"
+      >
         Fidelity
-        <FontAwesomeIcon
-          className="title"
-          icon={faHeadphones}
-        ></FontAwesomeIcon>
-      </h1>
+      </Text>
 
       <div className="btn">
         <CleanButton
