@@ -2,24 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { transitions, positions, Provider as AlertProvider } from "react-alert";
-import AlertTemplate from "react-alert-template-basic";
 
-// optional configuration
-const options = {
-  // you can also just use 'bottom center'
-  position: positions.BOTTOM_CENTER,
-  timeout: 3000,
-  offset: "20px",
-  type: "success",
-  // you can also just use 'scale'
-  transition: transitions.SCALE,
-};
+import { ChakraProvider } from "@chakra-ui/react";
 
 ReactDOM.render(
-  <AlertProvider template={AlertTemplate} {...options}>
+  <ChakraProvider>
     <App />
-  </AlertProvider>,
+  </ChakraProvider>,
   document.getElementById("root")
 );
 

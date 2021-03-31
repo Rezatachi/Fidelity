@@ -8,8 +8,7 @@ import {
   faRandom,
   faRedo,
 } from "@fortawesome/free-solid-svg-icons";
-import { useAlert } from "react-alert";
-
+import { useToast } from "@chakra-ui/react";
 const Player = ({
   currentSong,
   isPlaying,
@@ -23,6 +22,8 @@ const Player = ({
   volume,
   setvolume,
 }) => {
+  //Use Toast
+  const toast = useToast();
   // The dangers of use effect^:: The UseEffect will still run, causing unneccsary actions. In this case, the player.js and the libsong js use the same code causing useEffect to update twice.
   const activeLibraryHandler = (nextPrev) => {
     const newSongs = songs.map((song) => {
@@ -41,8 +42,6 @@ const Player = ({
     });
     setsongs(newSongs);
   };
-  //Events
-  const alert = useAlert();
 
   const playSongHandler = () => {
     if (isPlaying) {
@@ -73,6 +72,7 @@ const Player = ({
     // First we need to get an index, 1-7 in the array
     //If the current songid = the song id, that is our current Index
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+
     //Forward BAck
     if (direction === "skip-forward") {
       await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
@@ -83,6 +83,13 @@ const Player = ({
     if (direction === "random") {
       await setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
       activeLibraryHandler(songs[Math.floor(Math.random() * songs.length)]);
+      toast({
+        title: "Shuffle enabled",
+        description: "The next song will be shuffled.",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
     }
 
     if (direction === "skip-back") {
@@ -100,7 +107,13 @@ const Player = ({
     if (direction === "loop") {
       audioRef.current.loop = true;
       console.log(audioRef.current.loop);
-      alert.show("Loop enabled.");
+      toast({
+        title: "Loop enabled",
+        description: "The song will be repeated.",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
     }
     if (isPlaying) audioRef.current.play();
   };
@@ -167,7 +180,6 @@ const Player = ({
             onChange={(e) => handleVolume(e.target.value / 100)}
             step={1}
           />
-        
         </div>
       </div>
 
