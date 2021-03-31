@@ -16,7 +16,7 @@ const library = ({
   `;
   return (
     <Card className={`library ${libraryStatus ? "active-lib" : " "}`}>
-      <h2>Library</h2>
+      <h1>Library</h1>
       <h3>Choose a song to play.</h3>
       <StyledButtonWrapper2>
         <StatIconCard

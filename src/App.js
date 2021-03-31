@@ -1,36 +1,34 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Player from "./components/player";
 import Song from "./components/song";
 import chillhop from "./data";
 import Nav from "./components/nav";
 import Library from "./components/library";
 import BaseSec from "./components/footer";
-
-import "./styles/app.scss";
+import { ColorModeSwitcher } from "./components/ColorModeSwitcher";
 //imported libraries
-import { SenseiProvider, themeDark, themeLightBlue } from "react-sensei";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { SenseiProvider, themeDark as theme } from "react-sensei";
+import "./styles/app.scss";
 function App() {
   const audioRef = useRef(0);
-  //State
-  const [themeset, setthemeset] = useState("light");
-  const toggleTheme = () => {
-    if (themeset === "dark") {
-      localStorage.setItem("theme", "light");
-      setthemeset("light");
-    } else {
-      localStorage.setItem("theme", "dark");
-      setthemeset("dark");
-    }
-  };
+  // //State
+  // const [themeset, setthemeset] = useState("light");
+  // const toggleTheme = () => {
+  //   if (themeset === "dark") {
+  //     localStorage.setItem("theme", "light");
+  //     setthemeset("light");
+  //   } else {
+  //     localStorage.setItem("theme", "dark");
+  //     setthemeset("dark");
+  //   }
+  // };
 
-  useEffect(() => {
-    const localTheme = localStorage.getItem("theme");
-    if (localTheme) {
-      setthemeset(localTheme);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const localTheme = localStorage.getItem("theme");
+  //   if (localTheme) {
+  //     setthemeset(localTheme);
+  //   }
+  // }, []);
 
   const [volume, setvolume] = useState(0.3);
   const [songs, setsongs] = useState(chillhop());
@@ -55,15 +53,13 @@ function App() {
   };
 
   return (
-    <SenseiProvider theme={themeset === "dark" ? themeLightBlue : themeDark}>
+    <SenseiProvider theme={theme}>
       <div className={`App ${libraryStatus ? "library-active" : ""}`}>
         <Nav
           libraryStatus={libraryStatus}
           setlibraryStatus={setlibraryStatus}
-          themeset={themeset}
-          setthemeset={themeset}
         />
-
+        <ColorModeSwitcher />
         <div>
           <Song currentSong={currentSong} isPlaying={isPlaying} />
           <Player
@@ -79,14 +75,8 @@ function App() {
             volume={volume}
             setvolume={setvolume}
           />{" "}
-          <div className="theme-container">
-            <button className="themer" onClick={toggleTheme}>
-              <FontAwesomeIcon icon={faMoon}></FontAwesomeIcon>
-            </button>
-          </div>
           <BaseSec />
           <Library
-            theme={themeset === "dark" ? themeLightBlue : themeDark}
             libraryStatus={libraryStatus}
             setsongs={setsongs}
             audioRef={audioRef}

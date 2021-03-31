@@ -9,12 +9,14 @@
   box-shadow: 2px 2px 70px rgba(0, 0, 0, 0.3);
   overflow-y: scroll;
   transition: all 0.5s ease-out;
+  border-radius: 2px;
   z-index: 3;
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 }
-h2 {
-  font-size: 2rem;
-  font-weight: 500;
-}
+
 .lib-song-container {
   display: flex;
   align-items: center;
@@ -66,8 +68,9 @@ h2 {
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.23);
 }
 .active-lib {
-  transform: translateX(0%);
+  transform: translateX(-3%);
   opacity: 1;
+  border-radius: none;
 }
 @media screen and (max-width: 768px) {
   .library {
