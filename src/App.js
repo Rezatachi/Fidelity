@@ -7,7 +7,6 @@ import Library from "./components/library";
 import BaseSec from "./components/footer";
 import { ColorModeSwitcher } from "./components/ColorModeSwitcher";
 //imported libraries
-import { SenseiProvider, themeDark as theme } from "react-sensei";
 import "./styles/app.scss";
 function App() {
   const audioRef = useRef(0);
@@ -53,48 +52,43 @@ function App() {
   };
 
   return (
-    <SenseiProvider theme={theme}>
-      <div className={`App ${libraryStatus ? "library-active" : ""}`}>
-        <Nav
+    <div className={`App ${libraryStatus ? "library-active" : ""}`}>
+      <ColorModeSwitcher />
+      <Nav libraryStatus={libraryStatus} setlibraryStatus={setlibraryStatus} />
+      <div>
+        <Song currentSong={currentSong} isPlaying={isPlaying} />
+        <Player
+          setsongs={setsongs}
+          songs={songs}
+          SongInfo={SongInfo}
+          setSongInfo={setSongInfo}
+          audioRef={audioRef}
+          setisPlaying={setisPlaying}
+          currentSong={currentSong}
+          setCurrentSong={setCurrentSong}
+          isPlaying={isPlaying}
+          volume={volume}
+          setvolume={setvolume}
+        />{" "}
+        <BaseSec />
+        <Library
           libraryStatus={libraryStatus}
-          setlibraryStatus={setlibraryStatus}
+          setsongs={setsongs}
+          audioRef={audioRef}
+          isPlaying={isPlaying}
+          songs={songs}
+          setCurrentSong={setCurrentSong}
         />
-        <ColorModeSwitcher />
-        <div>
-          <Song currentSong={currentSong} isPlaying={isPlaying} />
-          <Player
-            setsongs={setsongs}
-            songs={songs}
-            SongInfo={SongInfo}
-            setSongInfo={setSongInfo}
-            audioRef={audioRef}
-            setisPlaying={setisPlaying}
-            currentSong={currentSong}
-            setCurrentSong={setCurrentSong}
-            isPlaying={isPlaying}
-            volume={volume}
-            setvolume={setvolume}
-          />{" "}
-          <BaseSec />
-          <Library
-            libraryStatus={libraryStatus}
-            setsongs={setsongs}
-            audioRef={audioRef}
-            isPlaying={isPlaying}
-            songs={songs}
-            setCurrentSong={setCurrentSong}
-          />
-        </div>
-        <audio
-          onTimeUpdate={timeUpdateHandler}
-          ref={audioRef}
-          src={currentSong.audio}
-          onLoadedMetadata={timeUpdateHandler}
-          onEnded={songEndHandler}
-          //Basically LoadedMeta Data looks like this when the song information loads into react, it fetches the number instantaneously
-        ></audio>
       </div>
-    </SenseiProvider>
+      <audio
+        onTimeUpdate={timeUpdateHandler}
+        ref={audioRef}
+        src={currentSong.audio}
+        onLoadedMetadata={timeUpdateHandler}
+        onEnded={songEndHandler}
+        //Basically LoadedMeta Data looks like this when the song information loads into react, it fetches the number instantaneously
+      ></audio>{" "}
+    </div>
   );
 }
 

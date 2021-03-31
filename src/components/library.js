@@ -1,7 +1,8 @@
 import React from "react";
-import { Card, StatIconCard } from "react-sensei";
+import { Stat, StatLabel, StatNumber, Box } from "@chakra-ui/react";
 import Libsong from "./librarysong";
-import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faVolumeUp } from "@fortawesome/free-solid-svg-icons";
 
 const library = ({
   songs,
@@ -11,20 +12,24 @@ const library = ({
   setsongs,
   libraryStatus,
 }) => {
-  const StyledButtonWrapper2 = styled.div`
-    width: 20rem;
-  `;
   return (
-    <Card className={`library ${libraryStatus ? "active-lib" : " "}`}>
-      <h1>Library</h1>
-      <h3>Choose a song to play.</h3>
-      <StyledButtonWrapper2>
-        <StatIconCard
-          label="Total Lo-Fi Songs"
-          value={songs.length}
-          icon="volume-up"
-        />
-      </StyledButtonWrapper2>
+    <div className={`library ${libraryStatus ? "active-lib" : " "}`}>
+      <Box
+        w="80%"
+        bg="teal"
+        px="4"
+        ml="2rem"
+        mt="2rem"
+        rounded="md"
+        color="white"
+      >
+        <h1>Library</h1>
+        <Stat>
+          <StatLabel>Total Songs</StatLabel>
+          <StatNumber>{songs.length}</StatNumber>
+          <FontAwesomeIcon>{faVolumeUp}</FontAwesomeIcon>
+        </Stat>
+      </Box>
       <div className="library-songs">
         {songs.map((song) => (
           <Libsong
@@ -41,7 +46,7 @@ const library = ({
         ))}
         {/* Here you are mapping the song prop across the Libsong component(during this you are also changing the prop name to song for Libsong) */}
       </div>
-    </Card>
+    </div>
   );
 };
 

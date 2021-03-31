@@ -1,5 +1,5 @@
 import React from "react";
-import { CleanButton } from "react-sensei";
+import { Button } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 
 const Nav = ({ libraryStatus, setlibraryStatus }) => {
@@ -10,15 +10,15 @@ const Nav = ({ libraryStatus, setlibraryStatus }) => {
       </Text>
 
       <div className="btn">
-        <CleanButton
-          style={{ outline: "none", border: "none", cursor: "pointer" }}
-          isPrimary
+        <Button
+          colorScheme="teal"
+          size="lg"
           onClick={() => setlibraryStatus(!libraryStatus)}
         >
-          <Text fontSize="lg" fontWeight="extrabold">
+          <Text fontSize="2xl" fontWeight="bold">
             Library
           </Text>
-        </CleanButton>
+        </Button>
       </div>
     </nav>
   );
