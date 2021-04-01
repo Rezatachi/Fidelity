@@ -73,6 +73,7 @@ function App() {
         <BaseSec />
         <Library
           libraryStatus={libraryStatus}
+          setlibraryStatus={setlibraryStatus}
           setsongs={setsongs}
           audioRef={audioRef}
           isPlaying={isPlaying}

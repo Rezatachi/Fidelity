@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 2;
   .Volumer input[type="range"] {
     width: 100%;
     -webkit-appearance: none;
@@ -22,7 +22,7 @@
   width: 50%;
   display: flex;
   align-items: center;
-  z-index: 3;
+  z-index: 2;
   input {
     width: 100%;
     -webkit-appearance: none;
@@ -41,7 +41,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  z-index: 3;
+  z-index: 2;
 
   width: 60%;
 
@@ -84,5 +84,8 @@
   }
   .play-control {
     width: 60%;
+  }
+  .Volumer {
+    display: none;
   }
 }
