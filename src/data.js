@@ -3,6 +3,16 @@ import { v4 as uuidv4 } from "uuid";
 function chillHop() {
   return [
     {
+      name: "sakura trees",
+      artist: "saib",
+      cover: "https://i1.sndcdn.com/artworks-000211920009-v4p0h0-t500x500.jpg",
+      audio:
+        "https://docs.google.com/uc?export=open&id=1muqxROlvi7cBhZOyA2K2nnXCVWQ0oiyc",
+      color: ["#615986", "#181413"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
       name: "sleepover",
       artist: "Nymano, JK the Sage",
       cover:
