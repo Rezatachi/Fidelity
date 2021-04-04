@@ -174,14 +174,14 @@ const Player = ({
             size="2x"
           ></FontAwesomeIcon>
         </div>
-        <div className="Volumer">
-          <input
-            value={Math.round(setvolume * 100)}
-            type="range"
-            onChange={(e) => handleVolume(e.target.value / 100)}
-            step={1}
-          />
-        </div>
+      </div>
+      <div className="Volumer">
+        <input
+          value={Math.round(volume * 100)}
+          type="range"
+          onChange={(e) => handleVolume(e.target.value / 100)}
+          step={1}
+        />
       </div>
 
       {/* Audio has its own event conditions */}
