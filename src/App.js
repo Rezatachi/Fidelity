@@ -37,6 +37,7 @@ function App() {
     currentTime: 0,
     duration: 0,
   });
+  const [isRandom, setisRandom] = useState(false);
   const [libraryStatus, setlibraryStatus] = useState();
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime;
@@ -47,6 +48,11 @@ function App() {
   const songEndHandler = async () => {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
     await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+
+    if (setisRandom) {
+      await setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
+      console.log("success");
+    }
     if (isPlaying) audioRef.current.play();
     return;
   };
@@ -69,6 +75,8 @@ function App() {
           isPlaying={isPlaying}
           volume={volume}
           setvolume={setvolume}
+          isRandom={isRandom}
+          setisRandom={setisRandom}
         />{" "}
         <BaseSec />
         <Library

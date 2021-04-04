@@ -21,6 +21,8 @@ const Player = ({
   setsongs,
   volume,
   setvolume,
+  isRandom,
+  setisRandom,
 }) => {
   //Use Toast
   const toast = useToast();
@@ -81,8 +83,7 @@ const Player = ({
       console.log(audioRef.current.loop);
     }
     if (direction === "random") {
-      await setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
-      activeLibraryHandler(songs[Math.floor(Math.random() * songs.length)]);
+      setisRandom(true);
       toast({
         title: "Shuffle enabled",
         description: "The next song will be shuffled.",
