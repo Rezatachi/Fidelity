@@ -5,7 +5,7 @@ import chillhop from "./data";
 import Nav from "./components/nav";
 import Library from "./components/library";
 import BaseSec from "./components/footer";
-import { ColorModeSwitcher } from "./components/ColorModeSwitcher";
+
 //imported libraries
 import "./styles/app.scss";
 function App() {
@@ -49,9 +49,8 @@ function App() {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
     await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
 
-    if (setisRandom) {
+    if (isRandom) {
       await setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
-      console.log("success");
     }
     if (isPlaying) audioRef.current.play();
     return;
@@ -59,7 +58,6 @@ function App() {
 
   return (
     <div className={`App ${libraryStatus ? "library-active" : ""}`}>
-      <ColorModeSwitcher />
       <Nav libraryStatus={libraryStatus} setlibraryStatus={setlibraryStatus} />
       <div>
         <Song currentSong={currentSong} isPlaying={isPlaying} />

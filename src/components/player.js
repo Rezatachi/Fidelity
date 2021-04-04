@@ -80,10 +80,9 @@ const Player = ({
       await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
       activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
       audioRef.current.loop = false;
-      console.log(audioRef.current.loop);
     }
     if (direction === "random") {
-      setisRandom(true);
+      setisRandom(!isRandom);
       toast({
         title: "Shuffle enabled",
         description: "The next song will be shuffled.",
@@ -107,7 +106,7 @@ const Player = ({
 
     if (direction === "loop") {
       audioRef.current.loop = true;
-      console.log(audioRef.current.loop);
+
       toast({
         title: "Loop enabled",
         description: "The song will be repeated.",
