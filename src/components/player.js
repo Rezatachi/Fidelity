@@ -80,6 +80,10 @@ const Player = ({
       await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
       activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
       audioRef.current.loop = false;
+      if (isRandom && direction === "skip-forward") {
+        console.log("success!");
+        await setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
+      }
     }
     if (direction === "random") {
       setisRandom(!isRandom);
@@ -96,10 +100,16 @@ const Player = ({
       if ((currentIndex - 1) % songs.length === -1) {
         await setCurrentSong(songs[songs.length - 1]);
         activeLibraryHandler(songs[songs.length - 1]);
+
         if (isPlaying) audioRef.current.play();
         audioRef.current.loop = false;
+        if (isRandom && direction === "skip-back") {
+          console.log("success!");
+          await setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
+        }
         return;
       }
+
       await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
       activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
     }

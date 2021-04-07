@@ -29,7 +29,7 @@ function App() {
   //   }
   // }, []);
 
-  const [volume, setvolume] = useState(0.3);
+  const [volume, setvolume] = useState(0.5);
   const [songs, setsongs] = useState(chillhop());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setisPlaying] = useState(false);
