@@ -6,7 +6,7 @@ function chillHop() {
       name: "island cafe",
       artist: "code",
       cover:
-        "https://cdn.discordapp.com/attachments/761256129191477261/836791493275811851/SummerVisions.png",
+        "https://cdn.discordapp.com/attachments/761256129191477261/838165808454041670/SummerVisions.jpg",
       audio:
         "https://docs.google.com/uc?export=open&id=1ifm6o-yMFgopS1qWjrFs5AJnJtuYPBjX",
       color: ["#615986", "#181413"],
@@ -17,7 +17,7 @@ function chillHop() {
       name: "lighthouse",
       artist: "code",
       cover:
-        "https://cdn.discordapp.com/attachments/761256129191477261/836791493275811851/SummerVisions.png",
+        "https://cdn.discordapp.com/attachments/761256129191477261/838165808454041670/SummerVisions.jpg",
       audio:
         "https://docs.google.com/uc?export=open&id=1DjTiCXrpdR_61SyZ1RxE2XP7rMA9-e_v",
       color: ["#615986", "#181413"],
