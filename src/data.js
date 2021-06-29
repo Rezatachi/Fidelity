@@ -3,28 +3,6 @@ import { v4 as uuidv4 } from "uuid";
 function chillHop() {
   return [
     {
-      name: "island cafe",
-      artist: "code",
-      cover:
-        "https://cdn.discordapp.com/attachments/761256129191477261/836791493275811851/SummerVisions.png",
-      audio:
-        "https://docs.google.com/uc?export=open&id=1ifm6o-yMFgopS1qWjrFs5AJnJtuYPBjX",
-      color: ["#615986", "#181413"],
-      id: uuidv4(),
-      active: false,
-    },
-    {
-      name: "lighthouse",
-      artist: "code",
-      cover:
-        "https://cdn.discordapp.com/attachments/761256129191477261/836791493275811851/SummerVisions.png",
-      audio:
-        "https://docs.google.com/uc?export=open&id=1DjTiCXrpdR_61SyZ1RxE2XP7rMA9-e_v",
-      color: ["#615986", "#181413"],
-      id: uuidv4(),
-      active: false,
-    },
-    {
       name: "sakura trees",
       artist: "saib",
       cover: "https://i1.sndcdn.com/artworks-000211920009-v4p0h0-t500x500.jpg",

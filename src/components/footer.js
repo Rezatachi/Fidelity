@@ -1,6 +1,9 @@
 import React from "react";
-import { Card } from "react-sensei";
+
+import { Box, Text } from "@chakra-ui/layout";
 import styled from "styled-components";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const BaseSec = () => {
   const Styledcardwrapper = styled.div`
@@ -12,17 +15,16 @@ const BaseSec = () => {
     z-index: 3;
   `;
 
-  const Title = styled.h4`
-    color: gray;
-  `;
   return (
     <Styledcardwrapper>
-      <Card isDefault>
-        <Title>
-          This web app is used for experimental purposes only. I am not selling
-          these songs. Please find the artists listed and support them! :)
-        </Title>
-      </Card>
+      <Box>
+        <Text fontWeight="bold" fontSize="2xl">
+          Follow me on Spotify:
+          <a href="https://open.spotify.com/artist/2jTi8cbTG80MsEtUCOuGa3">
+            <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>code
+          </a>
+        </Text>
+      </Box>
     </Styledcardwrapper>
   );
 };
