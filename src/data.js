@@ -3,6 +3,17 @@ import { v4 as uuidv4 } from "uuid";
 function chillHop() {
   return [
     {
+      name: "copacabana",
+      artist: "code",
+      cover:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSq4oIQQ3wYceGhJb4YnfiZ4OKqIoxA9SMrWDsgH1jSLX2h5qVotLNLNtOEAG_KjoSnQ&usqp=CAU",
+      audio:
+        "https://docs.google.com/uc?export=open&id=1f4bccIpRNT0xwIaEoX_uSrVhPVh9godv",
+      color: ["#615986", "#181413"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
       name: "sakura trees",
       artist: "saib",
       cover: "https://i1.sndcdn.com/artworks-000211920009-v4p0h0-t500x500.jpg",

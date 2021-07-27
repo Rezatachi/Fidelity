@@ -82,7 +82,9 @@ const Player = ({
       audioRef.current.loop = false;
       if (isRandom && direction === "skip-forward") {
         console.log("success!");
-        await setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
+        let random = songs[Math.floor(Math.random() * songs.length)];
+        await setCurrentSong(random);
+        activeLibraryHandler(random);
       }
     }
     if (direction === "random") {
