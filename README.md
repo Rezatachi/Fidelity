@@ -3,3 +3,6 @@
 # Since Spotify didn't have the music I wanted, I made my own music player!
 
 > Play, Pause, Skip , Loop, and Shuffle functionality implemented! Feel free to use this experimental music player!
+
+
+[ Listen to some music! ](https://fidelity-vibrance.netlify.app/)
